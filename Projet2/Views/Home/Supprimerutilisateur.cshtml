@@ -1,0 +1,46 @@
+﻿@model Projet2.Models.Utilisateur
+@{
+    ViewBag.Title = "SupprimerUtilisateur";
+    Layout = "_LayoutDuSite";
+}
+
+ @using (Html.BeginForm())
+    {
+    <fieldset>
+     <legend>Supprimer Un utilisateur : </legend>
+         @Html.LabelFor(m => Model.Nom) :
+        @Html.TextBoxFor(m => Model.Nom)
+   <br/>
+    <br />
+        @Html.LabelFor(m => Model.Prenom) :
+        @Html.TextBoxFor(m => Model.Prenom)
+      <br />
+       <br />
+        @Html.LabelFor(m => Model.DateDeNaissance) :
+        @Html.TextBoxFor(m => m.DateDeNaissance,"{0:yyyy-MM-dd}",
+           new { @type = "date"})
+      <br />
+       <br />
+        @Html.LabelFor(m => Model.Adresse) :
+        @Html.TextBoxFor(m => Model.Adresse)
+      <br />
+       <br />
+        @Html.LabelFor(m => Model.Email) :
+        @Html.TextBoxFor(m => Model.Email )
+      <br />
+        <br />
+        @Html.LabelFor(m => Model.MotDePasse) :
+        @Html.PasswordFor(m => Model.MotDePasse)
+      <br />
+        <input type="submit" value="Envoyer" />
+    </fieldset>
+}
+
+@section Menu{
+    <ul>
+        <li>@Html.ActionLink("Accueil", "Index")</li>
+        <li>@Html.ActionLink("Services", "Services")</li>
+        <li>@Html.ActionLink("Modification de l'utilisateur", "ModifierUtilisateur")</li>
+        <li class="selectionne">@Html.ActionLink("Suppression d'un utilisateur'", "SupprimerUtilisateur")</li>
+    </ul>
+}

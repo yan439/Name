@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Services";
+    Layout = "_LayoutDuSite";
+}
+
+<h1 align="center">Liste des services</h1>
+<table border="1" align="center">
+    <tr>
+        <th>Date de Création</th>
+        <th>Code secret</th>
+        <th>Numéro de réservation</th>
+    </tr>
+
+    
+    <tr>
+        <td>24/05/2021</td>
+        <td>56fytyj68444</td>
+        <td>25</td>
+    </tr>
+    <tr>
+        <td>24/05/2021</td>
+        <td>56fytyj68444</td>
+        <td>25</td>
+    </tr>
+</table>
+
+@section Menu{
+    <ul>
+        <li>@Html.ActionLink("Accueil", "Index")</li>
+        <li class="selectionne">@Html.ActionLink("Services", "Services")</li>
+        <li>@Html.ActionLink("Modification de l'utilisateur", "ModifierUtilisateur")</li>
+        <li>@Html.ActionLink("Suppression d'un utilisateur'", "SupprimerUtilisateur")</li>
+    </ul>
+}

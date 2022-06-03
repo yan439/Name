@@ -1,0 +1,20 @@
+﻿@model Projet2.ViewModels.HomeViewModel
+@{
+    ViewBag.Title = "Accueil";
+    Layout = "_LayoutDuSite";
+}
+
+    <div>Je suis la vue index</div>
+    <ul>
+       
+
+    </ul>
+
+ @section Menu{
+    <ul>
+        <li class="selectionne">@Html.ActionLink("Accueil", "Index")</li>
+        <li>@Html.ActionLink("Services", "ServiceIndex", "Service")</li>
+        <li>@Html.ActionLink("Modification de l'utilisateur", "ModifierUtilisateur")</li>
+        <li>@Html.ActionLink("Suppression d'un utilisateur'", "SupprimerUtilisateur")</li>
+    </ul>
+}
